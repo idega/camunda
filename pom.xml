@@ -127,6 +127,12 @@
 			<groupId>org.camunda.connect</groupId>
 			<artifactId>camunda-connect-soap-http-client</artifactId>
 		</dependency>
+		<!-- UUID generator -->
+		<dependency>
+			<groupId>com.fasterxml.uuid</groupId>
+			<artifactId>java-uuid-generator</artifactId>
+			<version>${version.uuid-generator}</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>camunda</finalName>
@@ -178,6 +184,7 @@
 		<version.mysql>5.1.21</version.mysql>
 		<version.resteasy>2.3.5.Final</version.resteasy>
 		<version.jersey2>2.25.1</version.jersey2>
+		<version.uuid-generator>3.1.2</version.uuid-generator>
 		<plugin.version.compiler>3.1</plugin.version.compiler>
 	</properties>
 </project>

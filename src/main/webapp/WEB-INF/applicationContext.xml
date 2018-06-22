@@ -52,16 +52,16 @@
 		<property
 			name="jobExecutorActivate"
 			value="false" />
-		<!-- <property
+		<property
 			name="history"
-			value="full" /> -->
+			value="full" />
 		<property
 			name="authorizationEnabled"
 			value="true" />
-		<!-- <property name="idGenerator">
+		<property name="idGenerator">
 			<bean
 				class="org.camunda.bpm.engine.impl.persistence.StrongUuidGenerator" />
-		</property> -->
+		</property>
 		<property name="processEnginePlugins">
 			<list>
 				<ref bean="ldapIdentityProviderPlugin" />
