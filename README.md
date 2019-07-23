@@ -5,6 +5,9 @@
 ### Maven
 - Install [Apache Maven](https://maven.apache.org/)
 
+### LDAP
+- Download [Apache Directory](https://directory.apache.org/apacheds/download/download-archive.html)
+
 ### Tomcat
 - Download [Apache Tomcat](https://tomcat.apache.org/download-70.cgi)
 
