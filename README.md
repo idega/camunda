@@ -12,9 +12,19 @@
 - Download [Apache Tomcat](https://tomcat.apache.org/download-70.cgi)
 
 ### MySQL
-- Install MySQL server
-- Create `camunda` database
-- Create `camunda` user and grant all privilegges to it on `camunda` database
+Connect to `root` user:
+```
+mysql -u root -p
+```
+
+Create `camunda` database:
+```
+CREATE SCHEMA `camunda` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+```
+
+Create `camunda` user:
+```
+```
 
 ### MySQL Connector
 - Download [mysql-connector-java-5.1.47.zip](https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.47.zip)
