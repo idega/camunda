@@ -20,7 +20,7 @@
 - Download [Eclipse for Java EE](https://www.eclipse.org/downloads/packages/release/2019-06/r/eclipse-ide-enterprise-java-developers)
 
 ## Code
-### Dependencies
+### Platform
 - Clone [Camunda BPM](https://github.com/idega/camunda-bpm-platform) repository
 - Checkout `master` branch
 - Compile with `mvn clean install -DskipTests`
