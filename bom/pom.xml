@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.camunda</groupId>
+    <artifactId>camunda-release-parent</artifactId>
+    <version>3.1</version>
+    <!-- do not remove empty tag - http://jira.codehaus.org/browse/MNG-4687 -->
+    <relativePath />
+  </parent>
+
+  <groupId>org.camunda.bpm</groupId>
+  <artifactId>camunda-bom</artifactId>
+  <version>7.10.0</version>
+  <packaging>pom</packaging>
+  <name>camunda BPM - Bom</name>
+  <url>http://camunda.org</url>
+
+  <description>camunda BPM bill of material</description>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <organization>
+    <name>camunda services GmbH</name>
+    <url>http://www.camunda.com</url>
+  </organization>
+
+  <properties>
+    <version.mybatis>3.4.4</version.mybatis>
+    <version.joda-time>2.1</version.joda-time>
+    <version.uuid-generator>3.1.2</version.uuid-generator>
+    <version.camunda.commons>1.6.1</version.camunda.commons>
+    <version.camunda.connect>1.1.0</version.camunda.connect>
+    <version.camunda.spin>1.6.3</version.camunda.spin>
+    <version.camunda.template-engines>1.1.0</version.camunda.template-engines>
+    <version.camunda.ee.xslt-plugin>1.1.0</version.camunda.ee.xslt-plugin>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- external dependencies -->
+      <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis</artifactId>
+        <version>${version.mybatis}</version>
+      </dependency>
+      <dependency>
+        <groupId>joda-time</groupId>
+        <artifactId>joda-time</artifactId>
+        <version>${version.joda-time}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.uuid</groupId>
+        <artifactId>java-uuid-generator</artifactId>
+        <version>${version.uuid-generator}</version>
+      </dependency>
+
+      <!-- camunda BPM public artifacts -->
+      <dependency>
+        <groupId>org.camunda.bpm</groupId>
+        <artifactId>camunda-engine</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm</groupId>
+        <artifactId>camunda-engine-cdi</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm</groupId>
+        <artifactId>camunda-engine-spring</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm</groupId>
+        <artifactId>camunda-engine-rest</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm</groupId>
+        <artifactId>camunda-engine-rest-jaxrs2</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm.identity</groupId>
+        <artifactId>camunda-identity-ldap</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm</groupId>
+        <artifactId>camunda-engine-plugin-spin</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm</groupId>
+        <artifactId>camunda-engine-plugin-connect</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm.javaee</groupId>
+        <artifactId>camunda-ejb-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.camunda.bpm.model</groupId>
+        <artifactId>camunda-xml-model</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm.model</groupId>
+        <artifactId>camunda-bpmn-model</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm.model</groupId>
+        <artifactId>camunda-cmmn-model</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm.model</groupId>
+        <artifactId>camunda-dmn-model</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm</groupId>
+        <artifactId>camunda-engine-rest</artifactId>
+        <version>${project.version}</version>
+        <classifier>classes</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm.webapp</groupId>
+        <artifactId>camunda-webapp-webjar</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm.webapp</groupId>
+        <artifactId>camunda-webapp</artifactId>
+        <version>${project.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm.webapp</groupId>
+        <artifactId>camunda-webapp</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+        <classifier>classes</classifier>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm.webapp</groupId>
+        <artifactId>camunda-webapp-webjar-ee</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <!-- dmn engine -->
+      <dependency>
+        <groupId>org.camunda.bpm.dmn</groupId>
+        <artifactId>camunda-engine-dmn-bom</artifactId>
+        <version>${project.version}</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+
+      <dependency>
+        <!--
+            make sure everybody uses the same commons version
+        -->
+        <groupId>org.camunda.commons</groupId>
+        <artifactId>camunda-commons-bom</artifactId>
+        <scope>import</scope>
+        <type>pom</type>
+        <version>${version.camunda.commons}</version>
+      </dependency>
+
+      <!-- optional dependencies -->
+      <dependency>
+        <groupId>org.camunda.connect</groupId>
+        <artifactId>camunda-connect-bom</artifactId>
+        <version>${version.camunda.connect}</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.spin</groupId>
+        <artifactId>camunda-spin-bom</artifactId>
+        <version>${version.camunda.spin}</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.template-engines</groupId>
+        <artifactId>camunda-template-engines-bom</artifactId>
+        <version>${version.camunda.template-engines}</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm.extension.xslt</groupId>
+        <artifactId>camunda-bpm-xslt</artifactId>
+        <version>${version.camunda.ee.xslt-plugin}</version>
+      </dependency>
+
+    </dependencies>
+  </dependencyManagement>
+
+  <developers>
+    <developer>
+      <id>camunda.org</id>
+      <name>camunda BPM Community</name>
+      <organization>camunda.org</organization>
+      <organizationUrl>http://camunda.org</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <url>https://github.com/camunda/camunda-bpm-platform</url>
+    <connection>scm:git:git@github.com:camunda/camunda-bpm-platform.git</connection>
+    <developerConnection>scm:git:git@github.com:camunda/camunda-bpm-platform.git</developerConnection>
+    <tag>7.10.0</tag>
+  </scm>
+
+  <issueManagement>
+    <system>Jira</system>
+    <url>https://app.camunda.com/jira/browse/CAM/</url>
+  </issueManagement>
+
+  <repositories>
+    <repository>
+      <id>fix-maven-snapshots-issue-with-nexus</id>
+      <url>allow-parent-pom-resolving-when-snapshot</url>
+    </repository>
+  </repositories>
+</project>
