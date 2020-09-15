@@ -47,6 +47,13 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <modules>
+        <module>webapps/h2-webapp</module>
+
+        <module>engine-rest</module>
+
+        <module>examples/invoice</module>
+
+        <module>distro/license-book</module>
         <module>distro/tomcat</module>
         <module>distro/sql-script</module>
 
@@ -62,7 +69,25 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <modules>
+        <module>distro/license-book</module>
         <module>distro/tomcat</module>
+      </modules>
+    </profile>
+
+    <profile>
+      <id>distro-serverless</id>
+      <modules>
+        <module>webapps/h2-webapp</module>
+
+        <module>engine-rest</module>
+
+        <module>examples/invoice</module>
+
+        <module>distro/sql-script</module>
+
+        <module>database</module>
+        <module>parent</module>
+        <module>bom</module>
       </modules>
     </profile>
 
@@ -72,19 +97,43 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <modules>
+        <module>distro/license-book</module>
         <module>distro/tomcat</module>
       </modules>
     </profile>
 
     <profile>
-      <id>distro-webjar</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
+      <!-- profile for running process-engine unit tests in QA -->
+      <id>check-engine</id>
       <modules>
-        <module>distro/webjar</module>
+        <module>engine-rest</module>
+
+        <module>database</module>
+        <module>parent</module>
+        <module>bom</module>
       </modules>
     </profile>
+
+    <profile>
+      <!-- profile for running webapp unit tests in QA -->
+      <id>check-webapps</id>
+      <modules>
+        <module>parent</module>
+        <module>bom</module>
+      </modules>
+    </profile>
+
+    <profile>
+      <id>sonatype-oss-release</id>
+      <modules>
+        <module>engine-rest</module>
+
+        <module>database</module>
+        <module>parent</module>
+        <module>bom</module>
+      </modules>
+    </profile>
+
   </profiles>
 
   <licenses>
