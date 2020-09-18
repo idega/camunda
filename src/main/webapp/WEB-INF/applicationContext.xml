@@ -48,7 +48,7 @@
 			ref="transactionManager" />
 		<property
 			name="databaseSchemaUpdate"
-			value="true" />
+			value="false" />
 		<property
 			name="jobExecutorActivate"
 			value="false" />

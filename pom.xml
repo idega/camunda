@@ -28,6 +28,11 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+	      <groupId>org.jboss.spec.javax.servlet</groupId>
+	      <artifactId>jboss-servlet-api_3.0_spec</artifactId>
+	      <version>1.0.2.Final</version>
+	    </dependency>
 		<!-- Engine -->
 		<dependency>
 			<groupId>org.camunda.bpm</groupId>
@@ -184,7 +189,7 @@
 		</plugins>
 	</build>
 	<properties>
-		<camunda.version>7.10.0-SNAPSHOT</camunda.version>
+		<camunda.version>7.10.0</camunda.version>
 		<spring.version>3.1.2.RELEASE</spring.version>
 		<version.mariadb>1.1.8</version.mariadb>
 		<version.mariadb.galera>1.6.3</version.mariadb.galera>
