@@ -190,7 +190,7 @@
 	</build>
 	<properties>
 		<camunda.version>7.10.0</camunda.version>
-		<spring.version>3.1.2.RELEASE</spring.version>
+		<spring.version>6.0.0</spring.version>
 		<version.mariadb>1.1.8</version.mariadb>
 		<version.mariadb.galera>1.6.3</version.mariadb.galera>
 		<version.mysql>8.0.16</version.mysql>
